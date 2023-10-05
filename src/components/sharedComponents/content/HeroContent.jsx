@@ -1,10 +1,14 @@
 import { BsArrowRight } from "react-icons/bs";
+import images from "../../others/SlideImg";
+import useAuthInfo from "../../../hooks/useAuthInfo";
 
 const HeroContent = () => {
+  const { imageIdx } = useAuthInfo();
+
   return (
     <div className="col-span-2 space-y-2 ml-10">
       <h1 className="text-5xl font-bold text-white uppercase">
-        Cox&rsquo;s bazar
+        {images[imageIdx].title}
       </h1>
       <p className="text-white max-w-sm">
         Cox&rsquo;s Bazar is a city, fishing port, tourism centre and district
